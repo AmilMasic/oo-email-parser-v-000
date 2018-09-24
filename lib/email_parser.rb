@@ -13,9 +13,9 @@ class EmailParser
   def parse(emails)
     email_array = []
     emails.split.collect do |email|
-      email_array << email.split(",")
+       email.split(",")
     end
-    email_array.flatten.uniq
+    self.flatten.uniq
 
   end
 

@@ -10,12 +10,11 @@ class EmailParser
   def initialize(emails)
     @emails = emails
   end
-  def parse(emails)
-    email_array = []
-    emails.split.collect do |email|
-       email.split(",")
-    end.flatten.uniq
-
+  def parse
+  		@emails = @emails.gsub(/[\s,]/ ," ").split
+  		# @email is an array now
+  		@emails.uniq
+  	end
   end
 
 
